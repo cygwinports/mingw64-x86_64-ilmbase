@@ -1,0 +1,14 @@
+--- origsrc/ilmbase-2.2.0/IlmThread/Makefile.am	2014-08-09 21:03:38.000000000 -0500
++++ src/ilmbase-2.2.0/IlmThread/Makefile.am	2015-10-25 23:44:22.716957900 -0500
+@@ -6,9 +6,8 @@ libIlmThread_la_SOURCES = IlmThreadPool.
+ 			  IlmThreadSemaphore.h IlmThreadMutex.h \
+ 			  IlmThreadPool.cpp IlmThread.cpp \
+ 			  IlmThreadSemaphore.cpp IlmThreadMutex.cpp \
+-			  IlmThreadPosix.cpp IlmThreadSemaphorePosix.cpp \
+-			  IlmThreadSemaphorePosixCompat.cpp \
+-			  IlmThreadMutexPosix.cpp
++			  IlmThreadWin32.cpp IlmThreadSemaphoreWin32.cpp \
++			  IlmThreadMutexWin32.cpp
+ 
+ libIlmThread_la_LDFLAGS = -version-info @LIBTOOL_VERSION@ -no-undefined
+ if LIB_SUFFIX_EXISTS

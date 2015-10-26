@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-ilmbase"
-VERSION=1.0.3
+VERSION=2.2.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="OpenEXR utility libraries for Win64 toolchain"
@@ -15,13 +15,14 @@ Windows threads.
 and other useful 2D and 3D math functions.
 * Iex is an exception-handling library."
 HOMEPAGE="http://openexr.com/"
-SRC_URI="https://github.com/downloads/openexr/openexr/ilmbase-${VERSION}.tar.gz"
+SRC_URI="mirror://savannah/openexr/ilmbase-${VERSION}.tar.gz"
 SRC_DIR="ilmbase-${VERSION}"
 PATCH_URI="
 	1.0.3-cross-compile.patch
-	1.0.3-win32-threads.patch
+	2.2.0-win32-threads.patch
 "
 
 DIFF_EXCLUDES="IlmBaseConfig.h"
 
 NO_AUTOHEADER=1
+CYGCONF_ARGS="--disable-namespaceversioning"
